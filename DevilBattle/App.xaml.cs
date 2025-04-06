@@ -9,7 +9,10 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            //return new Window(new MainPage());
+
+            //test page
+            return new Window(new Views.LeaderboardPage());
         }
     }
 }
