@@ -20,6 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void btn_continue_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
