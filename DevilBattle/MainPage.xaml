@@ -24,6 +24,7 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+            
             <Button x:Name="btn_continue" Text="CONTINUE" Clicked="btn_continue_Clicked" BackgroundColor="DarkBlue" />
         </VerticalStackLayout>
     </ScrollView>
