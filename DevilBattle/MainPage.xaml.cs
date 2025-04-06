@@ -14,6 +14,12 @@ namespace DevilBattle
         {
             await Navigation.PushAsync(new Views.LeaderboardPage());
         }
+
+        private async void begin_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.Market());
+
+        }
     }
 
 }

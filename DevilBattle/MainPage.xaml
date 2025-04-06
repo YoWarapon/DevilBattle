@@ -72,13 +72,14 @@
                 WidthRequest="100"
                 HeightRequest="50" />
                 
-                <Button
+                <Button x:Name="begin"
                 Text="Begin"
                 BackgroundColor="#3B5998CC"
                 TextColor="White"
                 CornerRadius="10"
                 WidthRequest="100"
-                HeightRequest="50" />
+                HeightRequest="50" 
+                        Clicked="begin_Clicked"/>
             </HorizontalStackLayout>
 
 
