@@ -2,11 +2,181 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DevilBattle.Views.Market"
-             Title="Market">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Market"
+             BackgroundImageSource="bg_game.png"
+             Shell.NavBarIsVisible="False">
+
+    <AbsoluteLayout>
+
+        <VerticalStackLayout 
+            Spacing="20"
+            Padding="20"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All">
+
+            <Label
+                Text="MARKET"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#B0B0B0"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <AbsoluteLayout WidthRequest="145" HeightRequest="145">
+                    <AbsoluteLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnItemTapped" />
+                    </AbsoluteLayout.GestureRecognizers>
+                    <!-- ITEM -->
+                    <Border
+                        BackgroundColor="#2F2F2F"
+                        Stroke="Gold"
+                        StrokeThickness="1"
+                        StrokeShape="Rectangle"
+                        Padding="10"
+                        AbsoluteLayout.LayoutBounds="0.5,0.5,125,125"
+                        AbsoluteLayout.LayoutFlags="PositionProportional">
+
+                        <Grid>
+                            <Label
+                                Text="Lorem ipsum dolor sit amet"
+                                FontSize="14"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                LineBreakMode="TailTruncation"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Start"
+                                Margin="0,0,0,80" />
+
+                            <Image
+                                Source="item2.png"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                Text="9999"
+                                FontSize="12"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End" />
+
+                            <Label
+                                Text="0.01"
+                                FontSize="12"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                HorizontalOptions="End"
+                                VerticalOptions="End" />
+                        </Grid>
+                    </Border>
+
+                    <Image Source="ornament_topleft.png"
+                           WidthRequest="30" HeightRequest="30"
+                           AbsoluteLayout.LayoutBounds="0,0,20,20"
+                           AbsoluteLayout.LayoutFlags="None" />
+
+                    <Image Source="ornament_topright.png"
+                           WidthRequest="35" HeightRequest="35"
+                           AbsoluteLayout.LayoutBounds="125,0,25,25"
+                           AbsoluteLayout.LayoutFlags="None" />
+
+                    <Image Source="ornament_bottomleft.png"
+                           WidthRequest="30" HeightRequest="30"
+                           AbsoluteLayout.LayoutBounds="0,125,20,20"
+                           AbsoluteLayout.LayoutFlags="None" />
+
+                    <Image Source="ornament_bottomright.png"
+                           WidthRequest="40" HeightRequest="40"
+                           AbsoluteLayout.LayoutBounds="125,125,15,15"
+                           AbsoluteLayout.LayoutFlags="None" />
+                </AbsoluteLayout>
+            </HorizontalStackLayout>
+
+            <!-- Navigation Buttons -->
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+                <Button
+                    Text="Character"
+                    BackgroundColor="#3B5998CC" 
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"
+                    HeightRequest="50" />
+
+                <Button
+                    Text="Begin"
+                    BackgroundColor="#3B5998" 
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"
+                    HeightRequest="50"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <!--  Modal  -->
+        <Border
+            x:Name="AmountPopup"
+            BackgroundColor="#222222CC"
+            Stroke="Gold"
+            StrokeThickness="1"
+            StrokeShape="Rectangle"
+            Padding="15"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,300,180"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsVisible="False">
+
+            <VerticalStackLayout Spacing="15">
+                <Label
+                    Text="AMOUNT"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="#FAD37A"
+                    HorizontalOptions="Center" />
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button
+                        Text="MIN"
+                        BackgroundColor="#3A0D0D"
+                        TextColor="White"
+                        WidthRequest="60"
+                        Clicked="OnMinClicked" />
+
+                    <Entry
+                        x:Name="AmountEntry"
+                        Text="1"
+                        TextColor="White"
+                        BackgroundColor="#333333"
+                        WidthRequest="80"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Numeric" />
+
+                    <Button
+                        Text="MAX"
+                        BackgroundColor="#3A0D0D"
+                        TextColor="White"
+                        WidthRequest="60"
+                        Clicked="OnMaxClicked" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Button
+                        Text="CANCEL"
+                        BackgroundColor="#111111"
+                        TextColor="#FAD37A"
+                        WidthRequest="120"
+                        Clicked="OnCancelAmount" />
+
+                    <Button
+                        Text="CONFIRM"
+                        BackgroundColor="#302B1A"
+                        TextColor="#FAD37A"
+                        WidthRequest="120"
+                        Clicked="OnConfirmAmount" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+    </AbsoluteLayout>
 </ContentPage>
