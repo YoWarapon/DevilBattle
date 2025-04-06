@@ -1,4 +1,6 @@
-﻿namespace DevilBattle
+﻿using System.Threading.Tasks;
+
+namespace DevilBattle
 {
     public partial class MainPage : ContentPage
     {
@@ -8,14 +10,10 @@
             InitializeComponent();
         }
 
-
-        private void btn_continue_Clicked(object sender, EventArgs e)
+        private async void leaderboard_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Views.LeaderboardPage());
         }
-
-
-
     }
 
 }
