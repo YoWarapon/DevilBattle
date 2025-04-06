@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevilBattle.MainPage">
+             x:Class="DevilBattle.MainPage"
+            BackgroundImageSource="bg_game.png">
 
     <ScrollView>
         <VerticalStackLayout
+            
             Padding="30,0"
             Spacing="25">
             <Image
@@ -15,17 +17,67 @@
 
             <Label
                 Text="Devill Battle"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <!-- Buttons -->
+            <Button
+            Text="NewGame"
+            BackgroundColor="#3B5998"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="200"
+            HeightRequest="50" />
 
             <Button
-                x:Name="CounterBtn"
-                Text="NEW GAME" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-            
-            <Button x:Name="btn_continue" Text="CONTINUE" Clicked="btn_continue_Clicked" BackgroundColor="DarkBlue" />
+            Text="Continue"
+            BackgroundColor="#3B5998"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="200"
+            HeightRequest="50" />
+
+            <Button
+            Text="Leaderboard"
+            BackgroundColor="#3B5998"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="200"
+            HeightRequest="50" />
+
+            <Button
+            Text="Settings"
+            BackgroundColor="#8B4513"
+            TextColor="White"
+            CornerRadius="10"
+            WidthRequest="200"
+            HeightRequest="50" />
+
+
+            <!-- Navigation Buttons -->
+            <HorizontalStackLayout
+            Spacing="10"
+            HorizontalOptions="Center">
+                <Button
+                Text="Character"
+                BackgroundColor="#3B5998"
+                TextColor="White"
+                CornerRadius="10"
+                WidthRequest="100"
+                HeightRequest="50" />
+                
+                <Button
+                Text="Begin"
+                BackgroundColor="#3B5998"
+                TextColor="White"
+                CornerRadius="10"
+                WidthRequest="100"
+                HeightRequest="50" />
+            </HorizontalStackLayout>
+
+
         </VerticalStackLayout>
     </ScrollView>
 
