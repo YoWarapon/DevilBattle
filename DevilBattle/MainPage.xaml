@@ -51,13 +51,14 @@
                     Clicked="leaderboard_Clicked"/>
 
             <Button x:Name="setting"
-            Text="Settings"
-            BackgroundColor="DarkGreen"
-            TextColor="White"
-            CornerRadius="10"
-            WidthRequest="200"
-            HeightRequest="50"
-            Opacity="1" />
+                Text="Settings"
+                BackgroundColor="DarkGreen"
+                TextColor="White"
+                CornerRadius="10"
+                WidthRequest="200"
+                HeightRequest="50"
+                Opacity="1"
+                Clicked="setting_Clicked" />
 
 
             <!-- Navigation Buttons -->
@@ -65,21 +66,21 @@
             Spacing="10"
             HorizontalOptions="Center">
                 <Button
-                Text="Character"
-                BackgroundColor="#3B5998CC"
-                TextColor="White"
-                CornerRadius="10"
-                WidthRequest="100"
-                HeightRequest="50" />
+                    Text="Character"
+                    BackgroundColor="#3B5998CC"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"
+                    HeightRequest="50" />
                 
                 <Button x:Name="begin"
-                Text="Begin"
-                BackgroundColor="#3B5998CC"
-                TextColor="White"
-                CornerRadius="10"
-                WidthRequest="100"
-                HeightRequest="50" 
-                        Clicked="begin_Clicked"/>
+                    Text="Begin"
+                    BackgroundColor="#3B5998CC"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="100"
+                    HeightRequest="50" 
+                    Clicked="begin_Clicked"/>
             </HorizontalStackLayout>
 
 

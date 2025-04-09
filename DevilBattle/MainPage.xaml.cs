@@ -20,6 +20,11 @@ namespace DevilBattle
             await Navigation.PushAsync(new Views.Market());
 
         }
+
+        private async void setting_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.Setting());
+        }
     }
 
 }

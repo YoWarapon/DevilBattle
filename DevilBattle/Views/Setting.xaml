@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevilBattle.Views.Setting"
+             Title="Setting"
+             BackgroundImageSource="bg_game.png" >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,50,30,30" Spacing="25">
+
+            <!-- Title -->
+            <Label Text="Setting"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#D0BFC8"
+                   HorizontalOptions="Center" />
+
+            <!-- Music Volume -->
+            <Label Text="Music Volume"
+                   TextColor="#7C6D76"
+                   FontSize="14"/>
+            
+            <Slider Minimum="0" Maximum="1" Value="0.5"
+                    ThumbColor="White"
+                    MinimumTrackColor="#9C6BFF"
+                    MaximumTrackColor="#CCCCCC" />
+
+            <!-- Mute All -->
+            <Label Text="Mute All"
+                   TextColor="#7C6D76"
+                   FontSize="14"/>
+            
+            <Switch OnColor="#9C6BFF"
+                    ThumbColor="White"
+                    HorizontalOptions="Start" />
+
+            <!-- Language Settings -->
+            <Label Text="Language Settings"
+                   TextColor="#7C6D76"
+                   FontSize="14"/>
+
+            <Border BackgroundColor="#1f1d1f"
+                    Padding="15"
+                    StrokeThickness="0">
+                
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                
+                <VerticalStackLayout Spacing="12">
+                    <HorizontalStackLayout Spacing="10">
+                        <CheckBox x:Name="chkEnglish"/>
+                        <Label Text="English" TextColor="White" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <CheckBox x:Name="chkThai"/>
+                        <Label Text="Thai" TextColor="White" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Gameplay Settings -->
+            <Label Text="Gameplay Settings"
+                   TextColor="#7C6D76"
+                   FontSize="14"/>
+
+            <Border BackgroundColor="#1f1d1f"
+                    Padding="15"
+                    StrokeThickness="0">
+                
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                
+                <VerticalStackLayout Spacing="12">
+                    <HorizontalStackLayout Spacing="10">
+                        <CheckBox x:Name="chkNormal"/>
+                        <Label Text="Normal" TextColor="White" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <CheckBox x:Name="chkFast"/>
+                        <Label Text="Fast" TextColor="White" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Back Button -->
+            <Button Text="Back"
+                    BackgroundColor="#9C6BFF"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Clicked="OnBackClicked" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
